@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI PDF Chatbot - Powered by Gemini/ChatGPT</title>
+    <link rel="icon" type="image/svg+xml" href="/static/favicon.svg">
+    <link rel="stylesheet" href="/static/css/style.css">
+    <link rel="stylesheet" href="/static/css/upload-fix.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container">
+        <!-- Header -->
+        <div class="header">
+            <h1>🤖 AI PDF Q&A Chatbot</h1>
+            <p>Upload your PDF and ask questions - Powered by Gemini/ChatGPT</p>
+        </div>
+
+        <!-- Main Grid -->
+        <div class="main-grid">
+            <!-- Upload Section -->
+            <div class="card">
+                <div class="card-header">
+                    <div class="card-icon">📄</div>
+                    <h2 class="card-title">Upload PDF</h2>
+                </div>
+
+                <div class="upload-content">
+                <div class="upload-area" id="uploadArea">
+                    <div class="upload-icon">📤</div>
+                    <p class="upload-text">
+                        <strong>Click to upload</strong> or drag and drop<br>
+                        PDF files only
+                    </p>
+                    <input type="file" id="fileInput" class="file-input" accept=".pdf">
+                </div>
+
+                <div class="file-info" id="fileInfo">
+                    <div style="flex: 1;">
+                        <div class="file-name" id="fileName">document.pdf</div>
+                        <div class="file-size" id="fileSize">2.5 MB</div>
+                    </div>
+                    <span style="font-size: 1.5rem;">✅</span>
+                </div>
+
+                <button class="btn btn-primary" id="uploadBtn" disabled style="width: 100%; margin-top: 1rem;">
+                    <span>🚀</span>
+                    <span>Submit</span>
+                </button>
+
+                <div class="loading" id="uploadLoading">
+                    <div class="spinner"></div>
+                    <p style="margin-top: 1rem; color: var(--gray);">Processing PDF...</p>
+                </div>
+
+                <!-- Success Message -->
+                <div id="uploadSuccess"
+                    style="display: none; margin-top: 1rem; padding: 1rem; background: #f0fdf4; border: 2px solid #10b981; border-radius: 12px; animation: slideIn 0.3s ease;">
+                    <div style="display: flex; align-items: center; gap: 0.5rem; color: #059669; font-weight: 600;">
+                        <span style="font-size: 1.5rem;">✅</span>
+                        <span id="uploadSuccessText">PDF processed successfully!</span>
+                    </div>
+                </div>
+
+                <!-- Stats -->
+                <div style="margin-top: 1rem; padding-top: 1rem; border-top: 2px solid var(--border);">
+                    <h3 style="font-size: 0.9rem; color: var(--gray); margin-bottom: 0.75rem;">Features</h3>
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 0.5rem;">
+                        <div style="display: flex; align-items: center; gap: 0.4rem;">
+                            <span style="font-size: 1rem;">⚡</span>
+                            <span style="font-size: 0.8rem;">Fast processing</span>
+                        </div>
+                        <div style="display: flex; align-items: center; gap: 0.4rem;">
+                            <span style="font-size: 1rem;">🧠</span>
+                            <span style="font-size: 0.8rem;">AI Powered</span>
+                        </div>
+                        <div style="display: flex; align-items: center; gap: 0.4rem;">
+                            <span style="font-size: 1rem;">🔒</span>
+                            <span style="font-size: 0.8rem;">Secure</span>
+                        </div>
+                        <div style="display: flex; align-items: center; gap: 0.4rem;">
+                            <span style="font-size: 1rem;">💬</span>
+                            <span style="font-size: 0.8rem;">Natural Q&A</span>
+                        </div>
+                    </div>
+                </div>
+                </div>
+            </div>
+
+            <!-- Chat Section -->
+            <div class="card">
+                <div class="card-header">
+                    <div class="card-icon">💬</div>
+                    <h2 class="card-title">Ask Questions</h2>
+                </div>
+
+                <div class="chat-container">
+                    <div class="chat-messages" id="chatMessages">
+                        <!-- Messages will be added here dynamically -->
+                    </div>
+
+                    <div class="loading" id="chatLoading">
+                        <div class="spinner"></div>
+                        <p style="margin-top: 0.5rem; color: var(--gray);">Thinking...</p>
+                    </div>
+
+                    <div class="chat-input-area">
+                        <input type="text" class="chat-input" id="questionInput"
+                            placeholder="Ask a question about your PDF..." disabled>
+                        <button class="btn btn-primary" id="askBtn" disabled>
+                            <span>🚀</span>
+                            <span>Ask</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <div style="text-align: center; margin-top: 1rem; color: white; opacity: 0.8; flex-shrink: 0;">
+            <p style="font-size: 0.85rem;">Built with FastAPI, LangChain & Gemini/ChatGPT | Made with ❤️</p>
+        </div>
+    </div>
+
+    <script src="/static/js/app.js"></script>
+</body>
+
+</html>

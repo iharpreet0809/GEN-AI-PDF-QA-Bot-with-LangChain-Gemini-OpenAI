@@ -1,0 +1,35 @@
+# ⚙️ .gitignore
+# ============================
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+
+
+# Environments
+venv/
+.env
+*.env
+
+
+# OS / IDE files
+.DS_Store
+.idea/
+.vscode/
+
+
+# Cache / Logs
+*.log
+*.sqlite3
+chroma_db/
+uploads/
+
+
+# Byte-compiled / distribution
+build/
+dist/
+.eggs/
+*.egg-info/

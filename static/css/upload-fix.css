@@ -1,0 +1,29 @@
+/* Upload card content wrapper */
+.upload-content {
+    display: flex;
+    flex-direction: column;
+    flex-shrink: 0;
+}
+
+/* Smooth scrollbar for cards */
+.card::-webkit-scrollbar {
+    width: 6px;
+}
+
+.card::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.card::-webkit-scrollbar-thumb {
+    background: #cbd5e1;
+    border-radius: 10px;
+}
+
+.card::-webkit-scrollbar-thumb:hover {
+    background: #94a3b8;
+}
+
+/* Make all elements in upload content non-shrinking */
+.upload-content > * {
+    flex-shrink: 0;
+}
