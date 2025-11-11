@@ -7,6 +7,10 @@ A modern, professional PDF Q&A chatbot built with FastAPI, LangChain, and Google
 ![LangChain](https://img.shields.io/badge/LangChain-1.0+-orange)
 ![Gemini](https://img.shields.io/badge/Gemini-2.5%20Pro-purple)
 
+## 📸 Screenshot
+
+![AI PDF Chatbot Interface](screenshot/sample.png)
+
 ## ✨ Features
 
 - 📄 **PDF Upload & Processing** - Drag & drop or click to upload
