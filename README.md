@@ -27,7 +27,7 @@ A modern, professional PDF Q&A chatbot built with FastAPI, LangChain, and Google
 
 1. **Clone the repository**
 ```bash
-git clone <your-repo-url>
+git clone https://github.com/iharpreet0809/GEN-AI-PDF-QA-Bot-with-LangChain-Gemini-OpenAI.git
 cd langchain_fastapi_pdfbot
 ```
 
